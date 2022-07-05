@@ -12,9 +12,44 @@ public class ModelUser {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
     private Long id;
-    private String nombre;
+    private String name;
+    private String lastName;
+    private Integer age;
+
+    private String gender;
     private String email;
-    private Integer prioridad;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 
     public Long getId() {
         return id;
@@ -24,13 +59,6 @@ public class ModelUser {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 
     public String getEmail() {
         return email;
@@ -40,11 +68,4 @@ public class ModelUser {
         this.email = email;
     }
 
-    public Integer getPrioridad() {
-        return prioridad;
-    }
-
-    public void setPrioridad(Integer prioridad) {
-        this.prioridad = prioridad;
-    }
 }

@@ -16,6 +16,8 @@
 	<description>Creacion de API REST CRUD</description>
 	<properties>
 		<java.version>11</java.version>
+        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -47,8 +49,10 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
 			</plugin>
 		</plugins>
 	</build>
